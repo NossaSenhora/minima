@@ -3,6 +3,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
+  {% include add-viacdn-dns_prefetch.html %}
+  {% include add-google_adsense-dns_prefetch.html %}
+  {% include add-google_analytics-dns_prefetch.html %}
+  {% include add-google_analytics_audiences-dns_prefetch.html %}
   <style type="text/css" media="all">
     {% capture include_to_scssify %}
       {% include main.scss %}
@@ -12,4 +16,5 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+  {% include add-google_tracking-dns_prefetch.html %}
 </head>
